@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Tag</title>
+    <style>
+        thead{
+            background-color: aquamarine;
+        }
+        tbody{
+            background-color: bisque;
+        }
+        table,th,td{
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 10px 10px;
+        }
+        .merged{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+        <h1>Students Records</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Sr.No.</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>abc</td>
+                    <td rowspan="2" class="merged">Web Designing</td>
+                    <td>123</td>
+                    <td>abc@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>mno</td>
+                    <!-- <td>Python</td> -->
+                    <td>456</td>
+                    <td>mno@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>xyz</td>
+                    <td>Java</td>
+                    <td colspan="2" class="merged">789</td>
+                    <!-- <td>xyz@gmail.com</td> -->
+                </tr>
+            </tbody>
+        </table>
+</body>
+</html>
