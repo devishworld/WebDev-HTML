@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: 'Concert One', cursive;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enquiry Form</h1>
+<div class="enquiryform">
+    <form action="">
+        <input type="text" name="name" id="name" placeholder="Enter your full name" required><br>
+        <input type="text" name="mobile" id="mobile" placeholder="Mobile No." required><br>
+        <input type="email" name="email" id="email" placeholder="Email Id" required><br>
+        <input type="text" name="course" id="course" placeholder="Course Interested In" required><br>
+        <textarea name="message" id="message" cols="19" rows="5" placeholder="Enter your query"></textarea><br>
+        <input type="submit"  onclick="sendtoWhatsApp()" value="Submit">
+        <input type="reset" value="Clear">
+    </form>
+</div>
+<script>
+    function sendtoWhatsApp(){
+        let user_fname = document.getElementById("name").value;
+        let user_mobile = document.getElementById("mobile").value;
+        let user_email = document.getElementById("email").value;
+        let user_course = document.getElementById("course").value;
+        let user_message = document.getElementById("message").value;
+        let whatsappURL = "https://wa.me/91YOUR_WHATSAPP_NUMBER_HERE>?text="
+            + "UserName : " + user_fname + "%0a"
+            + "UserMobileNo. : " + user_mobile + "%0a"
+            + "UserEmail : " + user_email + "%0a"
+            + "UserCourse : " + user_course + "%0a"
+            + "UserQuery : " + user_message;
+        window.open(whatsappURL,"_blank");
+    }
+</script>
+</body>
+</html>
